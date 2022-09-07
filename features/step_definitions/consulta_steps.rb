@@ -56,3 +56,7 @@ end
 Then('eu vejo uma mensagem de confirmacao de edicao') do
   expect(page).to have_text("successfully")
 end
+
+Then('eu vejo uma mensagem de erro de edicao') do
+  expect(page).to have_text("prohibited")
+end
