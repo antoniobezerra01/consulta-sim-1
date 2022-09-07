@@ -5,6 +5,7 @@ class Consulta < ApplicationRecord
 
   validate :data_consulta_futuro
   validate :horarios_validos
+  validates :data, presence: true
 
   def data_consulta_futuro
     if data.present? && data < Date.today
