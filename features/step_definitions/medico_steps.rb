@@ -49,3 +49,7 @@ end
 And('clico em atualizar medico') do
   click_button 'Update Medico'
 end
+
+Then('eu vejo uma mensagem de erro no cadastro') do
+  expect(page).to have_content("Crm can't be blank")
+end
